@@ -28,4 +28,4 @@ branches:
     - master  #只监测master
 env:
  global:
-   - GH_REF: github.com/LeoEatle/techBlog.git  #设置GH_REF
+   - GH_REF: github.com/LeoEatle/blog.git  #设置GH_REF

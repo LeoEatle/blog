@@ -11,8 +11,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://leoeatle.github.io/techBlog
-root: /techBlog/
+url: https://leoeatle.github.io
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -55,13 +55,13 @@ disqus_username: leoeatle
 ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
 ga_track_id: 'UA-114741658-2'            # Format: UA-xxxxxx-xx
-ga_domain: leoeatle.github.io/techBlog/
+ga_domain: leoeatle.github.io
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "What a weired name"
-sidebar-avatar: /techBlog/img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # Featured Tags
@@ -149,7 +149,7 @@ theme: huxblog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:LeoEatle/techBlog.git
+  repo: git@github.com:LeoEatle/blog.git
   branch: gh-pages
 
 # service worker
