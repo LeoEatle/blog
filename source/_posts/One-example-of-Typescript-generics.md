@@ -38,7 +38,7 @@ Or we can use a more generic speak. How do we limit the second parameter accordi
 OK, now we just `git clone https://github.com/microsoft/TypeScript.git` and figure it out.
 (Of course, you can just browse https://github.com/microsoft/TypeScript to explore the code.)
 
-Let's search `lib.dom.d.ts` and `declare function addEventListener`. Here we go
+Let's search `lib.dom.d.ts` and `declare function addEventListener`. Or you can just visit https://github.com/microsoft/TypeScript/blob/master/lib/lib.dom.d.ts#L19966. Here we go
 
 ```typescript
 declare function addEventListener<K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -56,6 +56,7 @@ Second parameter is a callback function. `(this: Window, ev: WindowEventMap[K]) 
 So what is `WindowEventMap` exactly? Press `command` and click it we'll find:
 
 ```typescript
+// https://github.com/microsoft/TypeScript/blob/master/lib/lib.dom.d.ts#L18434
 interface WindowEventMap extends GlobalEventHandlersEventMap, WindowEventHandlersEventMap {
     "abort": UIEvent;
     "afterprint": Event;
@@ -142,3 +143,16 @@ function loggingIdentity<T extends Lengthwise>(arg: T): T {
 }
 ```
 Here we create an interface that describes our constraint. And we use `extends` keyword to denote our constraint.
+
+### Use generic type in my own project
+
+The reason I explore generics is just because I have a scene in my own project. In my node service, we use `protobuf` to connect with RPC framework. There are many microservices there. When we call those RPC API, the code is like `this.requestTypeData('serviceName.APIName', queryData)`
+
+I want to define my second parameter `queryData` according to the first parameter `serviceName.APIName`. So we need a map to find the protobuf defination of the specific API.
+
+My colleague wrote a tool to transform all `protobuf` to `serviceName.d.ts`. Then we can just define the method `requestTypeData`.
+
+```typescript
+declare function requestTypeData<K extends keyof RPC_API_NAME>(apiName: K, queryData: RPC_API_REQ_MAP[K]): RPC_API_RES_MAP[K];
+```
+We use three maps here including the API's name, query map and result map.
