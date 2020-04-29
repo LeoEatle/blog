@@ -16,7 +16,8 @@
     "hexo-renderer-marked": "^0.2.10",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
-    "hexo-service-worker": "^1.0.1"
+    "hexo-service-worker": "^1.0.1",
+    "highlight.js": "^10.0.1"
   },
   "devDependencies": {
     "dtrace-provider": "^0.8.7"
