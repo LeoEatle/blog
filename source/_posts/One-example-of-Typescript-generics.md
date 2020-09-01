@@ -6,7 +6,7 @@ tags:
     - Typescript
 ---
 
-When I learn about Typescript at like two years ago, I just can't figure out the meaning of generics.
+When I learned about Typescript at like two years ago, I just can't figure out the meaning of generics.
 For a programmer who start coding by writing script language such as javascript or python, it's really hard to understand why we need generics in a typing system. This is one of the cons about getting used to script language. You just lose sensitive feeling about the importance of types in computer languages.
 
 But recently I found a very good example to describe why generics is useful and neccessary in a typing system. (Forgive me I can only use 'good' as an adj.)
@@ -92,7 +92,7 @@ declare function addEventListener(type: 'click', listener: (this: Window, ev: Mo
 declare function addEventListener(type: 'drag', listener: (this: Window, ev: DragEvent) => any, options?: boolean | AddEventListenerOptions): void;
 declare function addEventListener(type: 'hashchange', listener: (this: Window, ev: HashChangeEvent) => any, options?: boolean | AddEventListenerOptions): void;
 declare function addEventListener(type: 'focus', listener: (this: Window, ev: FocusEvent) => any, options?: boolean | AddEventListenerOptions): void;
-// and we have still a lot
+// and we still have a lot
 ```
 Come on! Who'll do such a stupid thing if we have **generics** now.
 
