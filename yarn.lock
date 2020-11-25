@@ -1502,9 +1502,9 @@ hexo@^3.7.1:
     titlecase "^1.1.2"
     warehouse "^2.2.0"
 
-highlight.js@^10.0.1:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.1.1.tgz#691a2148a8d922bf12e52a294566a0d993b94c57"
+highlight.js@^10.1.2:
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.1.2.tgz#c20db951ba1c22c055010648dfffd7b2a968e00c"
 
 highlight.js@^9.4.0:
   version "9.10.0"
