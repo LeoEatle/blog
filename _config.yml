@@ -152,8 +152,8 @@ theme: huxblog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:LeoEatle/blog.git
-  branch: gh-pages
+  repo: git@github.com:LeoEatle/leoeatle.github.io.git
+  branch: master
 
 # service worker
 # offline config passed to sw-precache.
